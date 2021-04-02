@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito+Sans:wght@400;800&display=swap');
+$fontFamily: 'Nunito Sans', sans-serif;
+$headings: 'Montserrat', sans-serif;
+$primary: #1e242b;
+$black: #000;
+$secondary: #2b333d;
+$accents: #02bece;
+$white: #fff;
+$fontSize: 16px;
+$transition: .3s ease;
+$paddingY: 100px 0;
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: $fontFamily;
+    color: $primary;
+    background-image:linear-gradient(rgba($black, .9), rgba($black, .9)), url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: $fontSize;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: $headings;
+}
+a {
+    transition: $transition;
+}
+.button {
+    background: transparent;
+    border: 2px solid $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    font-size: 1rem;
+    color: $white;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    &:hover {
+        color: $primary;
+        background: $white;
+        text-decoration: none;
+    }
+}
+/******* nav *******/
+nav {
+    &.stickyAdd {
+        transition: $transition;
+        background: rgba($accents, .9);
+        padding: 15px;
+        box-shadow: 0 5px 10px 5px rgba($black, .1);
+        .navbar-brand {
+            color: $white;
+            text-shadow: 0 0 2px $black;
+            &:hover {
+                color: $primary;
+            }
+        }
+        .nav-link:hover {
+            color: $primary !important;
+        }
+    }
+    .navbar-brand {
+        color: $accents;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-size: 2.5rem;
+        &:hover {
+            color: $white;
+        }
+    }
+    .nav-link {
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        // transition: $transition;
+        &:hover {
+            color: $accents !important;
+        }
+    }
+}
+/******* home *******/
+#home {
+    background-image:linear-gradient(rgba($black, .6), rgba($black, .6)), url(../img/header.jpg);
+    height: 100vh;
+    background-size: cover;
+    .container {
+        height: 100vh;
+        h1 {
+            color: $accents;
+            font-size: 4rem;
+        }
+        p, h4 {
+            font-size: 1.7rem;
+        }
+        .element {
+            color: $white;
+        }
+    }
+}
+/******* onama *******/
+#onama {
+    padding: $paddingY;
+    a {
+        color: $white;
+        font-size: 2rem;
+        margin-right: 20px;
+        &:hover {
+            color: $accents;
+        }
+    }
+}
+/******* program *******/
+#program {
+    padding: $paddingY;
+    background: rgba($accents, .8);
+    .card {
+        background: $black;
+        padding: 30px;
+        margin-bottom: 30px;
+        transition: $transition;
+        i {
+            color: $accents;
+            font-size: 3rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            &::after {
+                display: block;
+                content: "";
+                height: 2px;
+                background: $accents;
+                width: 50px;
+                margin: 20px auto;
+            }
+        }
+        &:hover {
+            background: $primary;
+        }
+    }
+}
+/******* iskustvo *******/
+#iskustvo {
+    padding: $paddingY;
+    .progress-bar {
+        background: $accents;
+    }
+}
+/******* tehnologije *******/
+#tehnologije {
+    padding: $paddingY;
+    background: rgba($accents, .8);
+}
+/******* radionice *******/
+#radionice {
+    padding: $paddingY;
+    img {
+        margin: 30px 0;
+    }
+}
+/******* kontakt *******/
+#kontakt {
+    padding: $paddingY;
+    background: rgba($accents, .8);
+}
+/******* prijava *******/
+#prijava {
+    padding: $paddingY;
+}
+/******* footer *******/
+footer {
+    background: rgba($accents, .8);
+    a {
+        color: $white;
+        margin: 0 10px;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
